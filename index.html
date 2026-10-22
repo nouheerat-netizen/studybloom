@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudyBloom | My Study Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2 class="logo">🌸 StudyBloom</h2>
+      <p class="tagline">Little steps, big dreams!</p>
+
+      <nav>
+        <a href="#dashboard" class="nav-link active">🏠 Dashboard</a>
+        <a href="#tasks" class="nav-link">📝 My Tasks</a>
+        <a href="#goals" class="nav-link">🎯 Study Goals</a>
+        <a href="#schedule" class="nav-link">📅 Timetable</a>
+      </nav>
+
+      <div class="sidebar-note">
+        <span>🌷</span>
+        <p>Believe in yourself. You are growing every day!</p>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+      <!-- Dashboard Header -->
+      <header class="topbar" id="dashboard">
+        <div>
+          <p class="eyebrow">YOUR LITTLE STUDY CORNER ✨</p>
+          <h1>Hello, Student! 💗</h1>
+          <p class="subtitle">Let's make today a productive day.</p>
+        </div>
+        <div class="date-card">
+          <span>📆</span>
+          <div>
+            <strong id="todayDate">Today</strong>
+            <p>One step at a time</p>
+          </div>
+        </div>
+      </header>
+
+      <!-- Summary Cards -->
+      <section class="stats">
+        <article class="stat-card pink">
+          <span class="stat-icon">📚</span>
+          <p>Total Tasks</p>
+          <h2 id="totalTasks">0</h2>
+        </article>
+
+        <article class="stat-card purple">
+          <span class="stat-icon">✅</span>
+          <p>Completed</p>
+          <h2 id="completedTasks">0</h2>
+        </article>
+
+        <article class="stat-card yellow">
+          <span class="stat-icon">🌟</span>
+          <p>Remaining</p>
+          <h2 id="remainingTasks">0</h2>
+        </article>
+      </section>
+
+      <!-- Tasks -->
+      <section class="panel" id="tasks">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">PLAN YOUR DAY</p>
+            <h2>My Study Tasks 📝</h2>
+          </div>
+          <span class="flower">🌼</span>
+        </div>
+
+        <form id="taskForm" class="task-form">
+          <input
+            type="text"
+            id="taskInput"
+            placeholder="What do you need to study?"
+            maxlength="100"
+            required
+          >
+
+          <select id="subjectInput" aria-label="Choose subject">
+            <option value="General">General</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="HTML & CSS">HTML & CSS</option>
+            <option value="C Programming">C Programming</option>
+            <option value="Statistics">Statistics</option>
+            <option value="College">College</option>
+          </select>
+
+          <button type="submit" class="add-button">+ Add Task</button>
+        </form>
+
+        <div class="filter-row">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="pending">Pending</button>
+          <button class="filter" data-filter="completed">Completed</button>
+        </div>
+
+        <ul id="taskList" class="task-list"></ul>
+        <p id="emptyMessage" class="empty-message">
+          🌸 Your task list is empty. Add your first task!
+        </p>
+      </section>
+
+      <!-- Study Goals -->
+      <section class="panel" id="goals">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">YOU'RE DOING GREAT</p>
+            <h2>My Study Goals 🎯</h2>
+          </div>
+          <span class="flower">🌈</span>
+        </div>
+
+        <div class="goal-box">
+          <div class="goal-top">
+            <span>Today's task progress</span>
+            <strong id="progressText">0%</strong>
+          </div>
+          <div class="progress-track">
+            <div id="progressBar" class="progress-bar"></div>
+          </div>
+          <p id="progressMessage">Every little effort counts! 💕</p>
+        </div>
+      </section>
+
+      <!-- Timetable -->
+      <section class="panel" id="schedule">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">MAKE TIME FOR YOUR DREAMS</p>
+            <h2>My Study Timetable 📅</h2>
+          </div>
+          <span class="flower">🦋</span>
+        </div>
+
+        <div class="schedule-list">
+          <div class="schedule-item">
+            <span class="time">4:00 PM</span>
+            <div>
+              <strong>HTML & CSS</strong>
+              <p>Practise building a webpage</p>
+            </div>
+            <span class="schedule-dot pink-dot"></span>
+          </div>
+
+          <div class="schedule-item">
+            <span class="time">5:00 PM</span>
+            <div>
+              <strong>JavaScript</strong>
+              <p>Learn loops and conditions</p>
+            </div>
+            <span class="schedule-dot purple-dot"></span>
+          </div>
+
+          <div class="schedule-item">
+            <span class="time">6:00 PM</span>
+            <div>
+              <strong>Revision Time</strong>
+              <p>Review college notes</p>
+            </div>
+            <span class="schedule-dot yellow-dot"></span>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        Made with 💗 and a little bit of magic · StudyBloom © 2026
+      </footer>
+
+    </main>
+ </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
